@@ -1,0 +1,176 @@
+<-- 해당 문서에서는 HTML의 링크 태그를 예시로 들기 위하여 의도적인 빈공백의 태그가 많음. 
+  또한 아랫단에는 링크 태그2에서 링크태그.html 파일로 링크를 걸어 놓음으로서 링크 태그릉 위한 예제를 만들었음.
+  세번째는 table 태그 실습과 더불어 오디오, 비디오 태그에 대한 예제가 들어있음.-->
+
+<--------------------------------------------------------------------------------------->
+
+<-- LinkTag.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            LinkTag
+        </title>
+        <meta charset="utf-8">
+        <style>
+            h2 {color: red;}
+        </style>
+    </head>
+    <body>
+         <!-- hyper refference 링크 주소(절대,상대주소 or url) -->
+        <a href="http://naver.com" target="_blank"><img src="images/naver.png" alt="네이버" width="150"></a><br>
+        "click the image"<br><br>
+        작성한 문서로 이동.<br>
+        <a href="tableTag.html" target="_blank">tableTag.html</a><br>
+        <!-- target : blank_새창열기 self(default 값)_본인창 그대로 사용. self, parent, top 안씀 -->
+        
+        <a href="http://google.com" target="_blank"><img src="images/google.png" alt="구글" width="150"></a><br>
+        <a href="http://daum.net" target="_blank"><img src="images/daum.png" alt="다음" width="150"></a><br><br>
+        <hr>
+
+        <h2>샹치와 텐 링즈의 전설</h2>
+        <a href="#pos1"><샹치>는 어떤 내용?</a><br> <!--페이지 내부에서의 링크이동 #pos-->
+        <a href="#pos2">샹치를 연기할 배우는 시무 리우</a><br>
+        <a href="#pos3">만다린의 훈련을 받은 어린 샹치</a><br>
+
+        <div><!--블록으로 묶어서 처리하는 태그-->
+        <a id="pos1"><br>
+            <샹치>는 어떤 내용?<br>
+            <샹치>는 원작이 된 동명의 마블 코믹스를 따르되, 그를 현대적으로 재해석한 히어로 영화가 될 예정이다. 샹치(시무 리우)는 조직 텐 링즈의 수장 만다린(양조위)의 아들이다. 마블의 팬이라면 MCU의 시작, <아이언맨> 속 토니 스타크(로버트 다우니 주니어)의 납치 배후에 있던 조직이 바로 텐 링즈였다는 걸 기억하고 있을 듯. 악행을 저지르는 아버지를 따를 수 없었던 샹치는 그룹에서 나와 10년간 독립의 삶을 이어간다. 영화 <샹치>는 만다린이 아들 샹치를 다시 조직으로 소환하며 벌어지는 이야기를 담는다. 샹치의 소개서와 같은 이번 영화에선 자신의 과거와 정면으로 마주하며 진정한 히어로로 성장하는 샹치를 만날 수 있지 않을까.<br>
+            </a>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div>
+            <a id="pos2">
+                샹치를 연기할 배우는 시무 리우<br>
+                2018년 12월 샹치의 실사 영화 제작 소식이 보도되었을 당시, 스티븐 연, 마이크 모, 견자단 등 다양한 배우들이 <샹치>의 출연자로 물망에 올랐다. 최종적으론 중국계 캐나다인 배우 시무 리우가 샹치 역에 캐스팅됐다. 넷플릭스에서 만날 수 있는 캐나다 시트콤 <김씨네 편의점>의 아들, 정 김 역으로 얼굴을 알린 배우다.<br>  
+            </a>
+        </div><br><br><br><br><br><br><br><br><br><br><br>
+        <div>
+            <a id="pos3">
+            만다린의 훈련을 받은 어린 샹치<br>
+            예고편에 따르면 <샹치>에선 샹치의 어린 시절도 만나볼 수 있을 예정이다. 샹치는 어린 시절부터 나무 기둥에 주먹을 휘두르며 쿵후를 익혔다. “세상에서 가장 위험한 자들도 건들 수 없을 정도”의 훈련을 거친 샹치는 주먹의 힘만으로 나무를 패이게 만든 파워를 지닌 인물. 10대 샹치는 여러 닌자들과 싸워도 지지 않는 실력을 지닌 능력자로 성장한다. 하지만 주변 사람들은 그의 대단한 실력을 아직 잘 모르는 모양. 예고편엔 샹치의 현란한 액션을 본 동료 케이티(아콰피나)가 그를 향해 “정체가 뭐냐” 물어보는 장면이 등장하기도 했다.<br>
+            </a>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <a href="#top">top-맨위로</a>
+    </body>
+</html>
+
+
+<--------------------------------------------------------------------------------------->
+
+
+<-- LinkTag2.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            LinkTag2
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+      <!-- 다른 페이지의 링크 이동 : LinkTag의 특정 문단으로 이동 #pos-->
+        <a href="LinkTag.html#pos1">샹치는 무엇?</a><br>
+        <a href="LinkTag.html#pos2">샹치를 연기할 배우는 시무 리우</a><br>
+        <a href="LinkTag.html#pos3">만다린의 훈련을 받은 어린 샹치<br></a><br>
+
+        <iframe src="tableTag.html" frameborder="0" width="1200" height="200"></iframe><br>
+        <!-- frameborder="0" or "1" HTML5 에서는 더 이상 지원안함. <iframe> 요소 주위에 테두리(border)를 보여줄지 여부를 명시함. 
+            scrolling : <iframe> 요소에 스크롤바(scrollbar)를 표시할지 여부를 명시함. 지원하지 않음.-->
+        <iframe src="LinkTag.html" frameborder="1" width="1200" height="200" name="LinkTag"></iframe><br>
+        <iframe src="http://116.42.52.220:8080/ringel/index.html" frameborder="no" width="1200" height="200"></iframe><br>
+
+        <div id="anything"></div> <!-- id 를 선언해서 각종 설정할수잇음. -->
+
+        <h1>자기소개</h1>
+        <p>저는 <b>이동욱</b> 입니다.</p><!-- 강조 굵게 -->
+        <p>저는 <i>이동욱</i> 입니다.</p><!-- 이태릭체 -->
+        <p>저는 <mark>이동욱</mark> 입니다.</p><!-- 마크처리 -->
+</html>
+
+
+<--------------------------------------------------------------------------------------->
+
+
+<-- tableTag.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Table Tag
+    </title>
+    <meta charset="utf-8">
+    <style>
+    </style>
+</head>
+
+<body>
+    <table border="1" width="50%" height="50%">
+        <tr>
+            <!--1행설정-->
+            <th>번호</th>
+            <th>이름</th>
+            <!--열설정-->
+            <th>나이</th> <!-- th : bold체로 변경 및 중앙정렬-->
+            <th>주소</th>
+        </tr>
+        <tr>
+            <!--2행설정-->
+            <th>1</th>
+            <!--th : header cell-->
+            <td>홍길동</td>
+            <!--td : standard cell-->
+            <td>25</td>
+            <td>서울</td>
+        </tr>
+        <tr>
+            <!--2행설정-->
+            <th>2</th>
+            <td>펭수</td>
+            <td>11</td>
+            <td>남극</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1" width="500">
+        <tr>
+            <th colspan="2">colspan</th>
+            <th rowspan="2">rowspan</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1" width="30%" height="100">
+        <tr>
+            <td colspan="2" rowspan="2"></td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+    <br>
+    <img src="D:\html\images\peng.jpg" width="350" alt="펭수"><!--src : 소스 alt : 음성서비스-->
+    <br>
+    
+    <table border="1">
+        
+        <tr>
+            <td><img src="D:\html\images\peng.jpg" width="350" alt="펭수"></td>
+        </tr>
+        <tr>
+            <td>펭수</td>
+        </tr>
+    </table>
+    <br>
+    <audio src="audio/old_melody.mp3" autoplay="0" controls loop></audio>
+    <br>
+    <video controls loop width="300" height="300">
+        <source src="video/KakaoTalk_20210507_164033121.mp4" type="video/mp4" >
+    </video>
+</body>
+
+</html>
