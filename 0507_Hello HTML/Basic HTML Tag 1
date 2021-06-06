@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--'head에는 보통 각종 세팅값이 들어감 '
+        - 하나 이상의 제목 요소(h1 ~ h6)
+        - 로고(logo)나 아이콘(icon)
+        - 저자(author) 정보-->
+        <title>
+            휴먼교육센터
+        </title>
+        <meta charset="utf-8">
+        <style> /* css 문법 따라서 주석 처리가 다른듯. */
+            /*양식 : '선택자 {속성:값}'*/
+            body {color: yellowgreen;} /*'바디의 텍스트 기본 색상 설정'*/
+            p {color : blue} /* p태그 색상 설정*/
+            red {color : red} /* p태그 색상 설정*/ 
+        </style>
+        <script> /*페이지의 동적인 구성은 JavaScript */
+            alert("안녕하세요");
+            document.write("<h2>여러분을 환영합니다!!(스크립트로 작성한 문단)</h2>") /*스크립트 텍스트 작성*/
+        </script>
+    </head>
+    <body>
+    
+    <!--0507_4_first.HTML------------------------------>
+        <br> <!--줄바꿈-->
+        <br>
+        <p> 저는 이동욱 입니다.</p> <!--문단바꿈-->
+        <red>이것은 red 태그</red> <br>
+        오늘 처음 수업을 듣고 있습니다.
+        <hr/> <!--라인 구분 paramiter-->
+        <colortext style="color:rebeccapurple"> <!--디폴트 설정을 무시하기 위해서는 열닫.-->
+            이 색은 rebeccapurple. <br>
+        </colortext>
+        이 색은 default
+        
+        
+    <!--0507_4_textTag.HTML---------------------------->
+        <!-- 제목 소제목 크기 나열 -->
+        <h1>Html 프로그램 - h1</h1>
+        <h2>Html 프로그램 - h2</h2>
+        <h3>Html 프로그램 - h3</h3>
+        <h4>Html 프로그램 - h4</h4>
+        <h5>Html 프로그램 - h5</h5>
+        <h6>Html 프로그램 - h6</h6> <br>
+        
+        
+        <pre> <!--타이핑한 모습 그대로 표현해줌.-->
+            <!--<p></p> <br> 함께 사용하는 효과-->
+         안녕하세요
+         이동욱 입니다.
+         이             동              욱
+        </pre>
+        
+        
+        <!-- 특수문자를 위한 코드가 따로 있다.-->
+        이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;동욱 <br> 
+        &lt;p&gt;&lt;/p&gt; &lt;br&gt; 함께 사용하는 효과 <br>
+        "&lt;"
+
+
+        <hr>
+
+
+        <h1>리스트 태그</h1>
+        
+        <!--명령어는 대소문자 가리지 않음.-->
+        <ul> <!--순서가 없는 unordered 점자 리스트-->
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+        </ul>
+        <ol> <!--순서가 있는 ordered 리스트-->
+            <li>농구</li>
+            <li>축구</li>
+            <li>야구</li>
+        </ol>
+        
+        <ul> <!--점자 리스트-->
+            <li> 스포츠
+                <ol> <!--숫자 리스트-->
+                    <li>농구</li>
+                    <li>축구</li>
+                    <li>야구</li>
+                </ol>
+            <li> 위인
+                <ol> <!--숫자 리스트-->
+                    <li>이순신</li>
+                    <li>홍길동</li>
+                    <li>펭수</li>
+                </ol>
+            </li>
+            <li>
+                <ol> <!--숫자 리스트-->
+                    <li>아이폰</li>
+                    <li>갤럭시</li>
+                    <li>엘지</li>
+                </ol>
+            </li>
+        </ul>
+        
+        
+        <-- 테이블 태그 -->
+                <table border="1" width="30%" height="100">
+            <tr>
+                <td></td>
+                <td colspan="2"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td rowspan="3"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2" ></td>
+                <td></td>
+                <td rowspan="2"></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        
+    </body>
+</html>
