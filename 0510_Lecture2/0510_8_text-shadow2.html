@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>text-shadow</title>
+    <meta charset="utf-8">
+    <style>
+        
+        body{
+            background: white; /*문서배경색*/
+        }
+        h1{
+            font-size: 80px;
+            font-family: "Arial Rounded MT";
+            letter-spacing: 4px; /* 자간 */
+        }
+        .shadow3 { 
+            color: black;
+            text-shadow: 0px 0px 4px white,0px -5px 4px yellow ,2px -10px 6px orange ,-2px -15px 11px rgba(255, 145, 0, 0.829), 4px -20px 18px red ;}
+        } 불모양 만들기
+        p {letter-spacing: 0.2em;} /* 자간 조절 */
+        div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            white-space: pre-wrap;} 
+            /* nowrap 테두리로 씌우지않음
+                pre 내용 그대로
+                pro-wrap 내용 그대로 씌워서 */
+        .c1 {color: red;}
+        .c2 {color: green;}
+        .c3 {color: blue}
+        .c4 {font-size: 30px;}
+
+        #p1 {font-size: 10px;}
+        #p2 {font-size: 20px;}
+        #p3 {font-size: 30px;}
+        #p4 {color: purple;}
+
+        h1,h2 {text-align: center;} /* 그룹선택자 , : 두가지를 동시에 선언 가능 */
+        .h2 {text-align: left;}
+    </style>
+</head> 
+<body>
+    <h1 class="shadow3 h2">HTML5</h1> 
+    <!-- h2라는 클래스 선언 가능, 초기 선언에 덮어쓰면(h1은 center가 디폴트지만 h2 클래스로 덮음) 최종 선언이 잔류함.-->
+    <h1>안녕하세요</h1>
+    <h2>안녕하세요</h2>
+    <div>안녕하세요               안녕하세요             안녕하세요             안녕하세요        안녕하세요           안녕하세요 </div>
+    <p>letter-spacing 자간조절</p>
+    <p class="c1 c4">이 것은 c1 클래스(색깔)와 c4 클래스(30px)의 p태그</p>
+    <p class="c2">이 것은 c2 클래스의 p태그</p>
+    <p class="c3">이 것은 c3 클래스의 p태그</p>
+    <div class="c2"> 이것은 클래스 c2의 div</div>
+    <!-- 클래스는 태그를 막론하고 다 기능을 함. 따라서 단순 CSS요소를 먹이고싶을때 할 수 있음.-->
+
+    <p id="p1 p4">이 것은 p1 id와 p4 id의 p태그</p>
+    <p id="p2">이 것은 p2 id의 p태그</p>
+    <p id="p3">이 것은 p3 id의 p태그</p>
+    <div class="c2" id="p3"> 이것은 클래스 c2, p3 id의 div</div>
+    <!-- class id 혼용 가능.-->
+
+    <p class="c1 c4">이 것은 c1 클래스(색깔)와 c4 클래스(30px)의 p태그</p>
+    <p id="p1 p4">이 것은 p1 id와 p4 id의 p태그</p> <!--동시 작용 불가능-->
+    <!-- class id의 차이점 : 다른 효과 동시 적용 가능 불가능 차이-->
+
+</body>   
+</html>
