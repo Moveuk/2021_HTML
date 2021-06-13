@@ -169,7 +169,7 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
    
  **예제 코드 실행 이미지**   
     
- <img src="https://user-images.githubusercontent.com/84966961/121808937-c7d8ce00-cc95-11eb-89d3-033f85117fff.png" width="30">   
+ <img src="https://user-images.githubusercontent.com/84966961/121808937-c7d8ce00-cc95-11eb-89d3-033f85117fff.png" width="40%">   
    
  CSS의 속성들은 비교적 직관적이기에 코드를 읽어보고 실제로 나오는 이미지와 비교해보면서 CSS를 문법을 익히면 도움이 될 듯하다.   
    
