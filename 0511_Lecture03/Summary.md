@@ -51,11 +51,16 @@ Key Word :
 <br/>
  또한 클래스를 적용하고 싶다면 `<p class="big-line">` 다음과 같이 원하는 태그에 `클래스="클래스이름명"` 을 넣어주면 된다.
 <br/>
+
 <hr/>
-### 배경(background) 속성       
+
+### 배경(background) 속성   
+
 <br/>
- **배경예제 코드**
-<br/>
+
+**배경 예제 코드**   
+   
+
 ```
 <head>
     <meta charset="utf-8">
@@ -77,6 +82,7 @@ Key Word :
     </div>
 </body>
 ```
+   
 <br/>
 **예시 화면**<br/>
 ![image](https://user-images.githubusercontent.com/84966961/121808452-87785080-cc93-11eb-8716-0200978b4c64.png)
