@@ -750,9 +750,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 
    
  <br/><br/><br/>
-<hr/>   
-  ###  
+<hr/>
+   
+  ### 레이아웃 구조 익히기   
+  
  **예제 코드**
+   
 ```
 <head>
     <meta charset="utf-8">
@@ -762,7 +765,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
             border: black solid 1px;
             margin: 10px;
             padding: 10px;
-
         }
         #container {
             width: 960px;
@@ -791,7 +793,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
         }
     </style>
 </head>
-
 <body>
     <div id="container">
         <div id="header">
@@ -799,12 +800,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
         </div>
         <div id="contents">
             <h2>본문</h2>
-
-            <p>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야
-                한다.</p>
-
-            <p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 언론·출판에 대한 허가나 검열과 집회·결사에
-                대한 허가는 인정되지 아니한다.</p>
+            <p>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.</p>
+            <p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.</p>
         </div>
         <div id="sidebar">
             <h2>사이드 바</h2>
@@ -818,8 +815,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
         </div>
     </div>
 </body>
-```   
-**코드 예제 이미지**  
+```
+
+**코드 예제 이미지**   
 ![image](https://user-images.githubusercontent.com/84966961/121812046-5c94f900-cca1-11eb-9863-3633acdb6729.png)   
    
  이 예제를 통해 기본적인 HTML 파일의 레이아웃 구조를 파악해보고자 한다.   
@@ -828,9 +826,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 
    
  <br/><br/><br/>
-<hr/>   
-  ### position(static, realative, absolute, fixed)의 개념
- **예제 코드**
+<hr/>
+   
+  ### position(static, realative, absolute, fixed)의 개념   
+  
+ **예제 코드**   
+ 
 ```
     <head>
         <meta charset="utf-8">
