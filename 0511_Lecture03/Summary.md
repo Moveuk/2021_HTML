@@ -51,11 +51,11 @@ Key Word :
 <br/>
  또한 클래스를 적용하고 싶다면 `<p class="big-line">` 다음과 같이 원하는 태그에 `클래스="클래스이름명"` 을 넣어주면 된다.
 <br/>
----
- ### 배경(background) 속성       
+<hr/>
+### 배경(background) 속성       
 <br/>
  **배경예제 코드**
-    
+<br/>
 ```
 <head>
     <meta charset="utf-8">
@@ -77,10 +77,10 @@ Key Word :
     </div>
 </body>
 ```
-
+<br/>
    **예시 화면**
 ![image](https://user-images.githubusercontent.com/84966961/121808452-87785080-cc93-11eb-8716-0200978b4c64.png)
-   
+<br/>
  코드를 보면 div와 body에 각각 배경에 관한 속성을 넣어준 것이 보인다.
 <br/>
  body 를 보면 url을 통해 상대 경로로 image 폴더에 있는 bg1.png 파일을 적용시킨것을 알 수 있다. 또한 background-repeat 라는 속성을 이용하여 y축(위아래)으로만 반복시킨 것을 예제 이미지를 통해 확인이 가능하다.
