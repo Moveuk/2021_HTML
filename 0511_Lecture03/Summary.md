@@ -41,10 +41,11 @@ Key Word :
         
     </body>
  ```
- <br/>
- **class 차이에 따른 줄간격의 예제 이미지.**
+    
+**class 차이에 따른 줄간격의 예제 이미지.**
+<br/>
 ![image](https://user-images.githubusercontent.com/84966961/121807666-15ead300-cc90-11eb-8da0-67bf232f28f6.png)   
-   
+<br/>
  .big-line은 원본 줄간격의 상대 크기 2배로 늘리는 설정이며, .samll-line은 글자 크기의 0.7배로 줄여보이게 한다. 단, 줄 간격은 위아래에 포함되는 간격에 모두 적용되므로 이 점을 잘 기억해 두어야 한다.   
 
 <br/>
