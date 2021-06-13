@@ -17,8 +17,10 @@ Key Word :
     
 <br/>
 <hr/>
- ### class의 사용   
-   **class 사용을 통한 줄간격 설정 예제**
+
+ ### class의 사용 <br/>
+ **class 사용을 통한 줄간격 설정 예제**
+<br/>
 ```  
     <head>
         <style>
