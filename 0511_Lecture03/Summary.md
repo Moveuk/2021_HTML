@@ -179,8 +179,9 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
    
 <br/><br/><br/>
 <hr/>
- ### ul, ol 태그와 list-style-type  
    
+### ul, ol 태그와 list-style-type   
+  
  **예제 코드**
 ```
         <style>
@@ -228,7 +229,8 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
 
 <br/><br/><br/>
 <hr/>   
-  ### position 속성을 이용한 이미지 위의 글씨 위치 시키기
+
+### position 속성을 이용한 이미지 위의 글씨 위치 시키기   
    
  **예제 코드**
 ```
@@ -280,9 +282,10 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
 
 
 <br/><br/><br/>
-<hr/>   
-  ### Content의 margin과 padding의 개념   
-
+<hr/>
+   
+ ### Content의 margin과 padding의 개념   
+   
  웹페이지에서 margin, padding, border의 개념은 중요하다. 다음 이미지를 통해 알아보자.
 
  ![image](https://user-images.githubusercontent.com/84966961/121809690-bd6c0380-cc98-11eb-8cc5-af99b160ef0a.png)
@@ -303,8 +306,8 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
    
 <br/><br/><br/>
 <hr/>   
-  ### position(fixed, absolute, relarive)의 개념, ovrflow : visible 속성   
-  
+### position(fixed, absolute, relarive)의 개념, ovrflow : visible 속성   
+   
  **예제 코드**
 ```
 <head>
@@ -372,10 +375,10 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
 
    
 <br/><br/><br/>
-<hr/>   
-  ### 블록레벨 태그와 인라인레벨 태그 개념   
+<hr/>
+ ### 블록레벨 태그와 인라인레벨 태그 개념   
    
- 위의 코드를 통해 알 수 있는 내용들이다. 읽어보고 넘어가자.
+위의 코드를 통해 알 수 있는 내용들이다. 읽어보고 넘어가자.
  
  1. 블록레벨 태그 : p,h1,ul,form,hr,table   
 	횡으로 끝까지 있는 블록(전체 한 줄에 대한 태그), 블록의 크기를 정해줘야함. width, height 등을 정해줘야함. 배치상 블록 옆에 블록이 올 수 없음.   
@@ -385,8 +388,9 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
    
    
 <br/><br/><br/>
-<hr/>   
-  ### 블록의 인라인화와 인라인의 블록화    
+<hr/>
+ ### 블록의 인라인화와 인라인의 블록화   
+    
  **예제 코드**
 ```
 <head>
