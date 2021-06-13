@@ -376,6 +376,7 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
    
 <br/><br/><br/>
 <hr/>
+   
  ### 블록레벨 태그와 인라인레벨 태그 개념   
    
 위의 코드를 통해 알 수 있는 내용들이다. 읽어보고 넘어가자.
@@ -389,6 +390,7 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
    
 <br/><br/><br/>
 <hr/>
+   
  ### 블록의 인라인화와 인라인의 블록화   
     
  **예제 코드**
@@ -460,7 +462,8 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
 
    
  <br/><br/><br/>
-<hr/>   
+<hr/>
+   
   ### border-radius 속성을 이용한 원 만들어보기
  **예제 코드**
 ```
