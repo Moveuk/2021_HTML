@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>
+        </title>
+        <style>
+            /*static, relative, absolute, fixed*/
+        /*  static  : 디폴트값
+            absloute : 브라우저 기준 왼쪽 상단 기준으로 이동
+            relative : 현재 코딩 위치를 기준으로 이동
+            fixed   : static 기준(부모기준)으로 고정되어 이동 */
+            .b1 {
+                float: left;
+                width: 100px;
+                background: lightcoral;
+                margin-right: 10px;
+                padding: 20px;
+            }
+            .b2 {
+                position: relative;
+                top: 30px;
+                left: -30px; /*캐스캐이딩 : 요소와 요소가 겹쳐져서 보여줌*/
+                /* right: 30px;  left와 right 동시 사용 불가 */
+                float: left;
+                width: 300px;
+                background: lightgreen;
+                margin-right: 10px;
+                padding: 20px;
+            } 
+            p {position: relative;
+                top: -30px;
+                clear: both;}
+        </style>
+    </head>
+    <body>
+      <div class="b1">박스1</div>
+      <div class="b2">박스2</div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam dolor velit adipisci eligendi laborum perferendis, optio cum nisi explicabo fugit repellendus reiciendis ducimus iste nesciunt est a, ab, molestiae natus.</p>
+    </body>
+</html>
