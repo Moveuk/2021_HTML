@@ -1,5 +1,5 @@
 # HTML & CSS
-Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, margin과 padding의 개념, position(fixed, absolute, relative)의 개념, ovrflow : visible 속성, 블록레벨 태그, 인라인레벨 태그, border-radius, display(inline, block,...), 배경 그라데이션, box-sizing(content-box, border-box), float, 
+Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, margin과 padding의 개념, position(fixed, absolute, relative)의 개념, ovrflow : visible 속성, 블록레벨 태그, 인라인레벨 태그, border-radius, display(inline, block,...), 배경 그라데이션, box-sizing(content-box, border-box), float, inline-block, link, visited, hover, active, 
 <hr/>
 
 ## CSS(Cascading Style Sheet)!   
@@ -301,7 +301,7 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
    
 <br/><br/><br/>
 <hr/>   
-  ### position(fixed, absolute,)의 개념, ovrflow : visible 속성   
+  ### position(fixed, absolute, relarive)의 개념, ovrflow : visible 속성   
   
  **예제 코드**
 ```
@@ -559,7 +559,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
    
  <br/><br/><br/>
 <hr/>   
-  ### 페이지의 구성을 잡아주는 float    
+  ### 페이지의 구성을 잡아주는 float과 clear     
  **예제 코드**
 ```
 	<head>
@@ -602,289 +602,315 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
  예시의 사진 처럼 박스 1과 2는 float 처리가 되어있고 left 방향으로 이동한 것을 알 수 있다. 그런데 float 됨과 동시에 화면상에서 떠오르므로 아래에 존재해야할 박스 3이 아래에서 딸려 올라와 박스1과 2에 겹쳐진 것을 볼 수 있다. 이것이 **float**의 기능이다.   
    
  우리는 float을 통해 블록 태그들을 원하는 곳에 위치시킬 수 있다.
-
+    
+ 또한, float은 clear를 통해 기존에 float했던 요소들을 다음부터는 기존 상태로 복원시킬 수 있다.   
+ 
+ **예제 코드**
+```
+            .box1 {
+                background: blueviolet;
+                float: left; /*블록화한 것들을 위치시킬때 쓰는 속성*/
+            }
+            .box2 {
+                background: chartreuse;
+                float: left;
+            }
+            .box3 {
+                background: firebrick;
+                clear:both; /*앞에 플롯 날려줌. */
+            }
+            .box4 {
+                background: greenyellow;
+                margin-right: 50px;
+            }
+```   
+**코드 예제 이미지**    
+ ![image](https://user-images.githubusercontent.com/84966961/121811958-12ac1300-cca1-11eb-83cb-7252ef28a771.png)   
+   
+ 앞에 박스 1,2가 float으로 띄워졌지만 박스 3에 clear를 줌으로서 기존의 예제처럼 겹치는 것이 아니라 다시 제대로 나열할 수 있게 되었다.
+ 
    
  <br/><br/><br/>
 <hr/>   
-  ### 
+  ### 또 다른 display 속성 : inline-block
  **예제 코드**
 ```
-
+	<head>
+		<meta charset="utf-8">
+		<title>display 속성</title>
+		<style>
+			a:link, a:visited { 
+			/*	1. a:link 방문 전 링크 상태
+				2. a:visited 방문 후 링크 상태
+				3. a:hover 마우스 오버했을 때 링크 상태
+				4. a:active  클릭했을 때 링크 상태
+				하이퍼링크 클릭후 색깔 등을 없애는 용도?
+				*/
+				color:black;
+				text-decoration: none;
+			}
+            nav li{display: inline-block;} /*???*/
+        
+			li {
+				width: 70px;
+				height: 30px;
+                border: 1px  black;
+				text-align: center;
+				line-height: 30px;
+				}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#">메뉴1</a></li>
+				<li><a href="#">메뉴2</a></li>
+				<li><a href="#">메뉴3</a></li>
+				<li><a href="#">메뉴4</a></li>
+			</ul>
+		</nav>
+	</body>
 ```   
 **코드 예제 이미지**   
+![image](https://user-images.githubusercontent.com/84966961/121811389-49812980-cc9f-11eb-9c43-eeda4b38dc3f.png)   
+   
+ display의 속성에는 inline-block라는 속성도 있다. 이 속성은 inline인 태그의 형태는 유지하면서 block의 성질을 가지게 하는 속성이다. 즉 `margin`, `width` 등의 속성 값을 적용시킬 수 있게 만들어주는 속성이기에 유용하다. 대표적으로 `<button>`이나 `<select>` 태그 등이 있다.   
+   
+ 예제에서는 인라인 태그인 li 태그를 inline을 유지한 상태로 block화시켜 너비와 높이 값 그리고 inline에는 줄 수 없었던 border 값 또한 준 것이 보인다.   
+	
+ 이외에도 a:link, a:visited 는 다음 예제에서도 설명하겠지만 간단하게 짚고 넘어가자면 다음과 같은 상태들에 대해서 설정값을 줄 수 있는 속성들이다.
 
+ 1. a:link 방문 전 링크 상태
+ 2. a:visited 방문 후 링크 상태
+ 3. a:hover 마우스 오버했을 때 링크 상태
+ 4. a:active  클릭했을 때 링크 상태
 
+ 링크 태그의 경우 위의 경우들 처럼 기본 디폴트 값으로 파랗게 변하거나 밑줄이 쳐지는 등의 값이 존재하기 때문이다.
+   
+ <br/><br/><br/>
+<hr/>   
+ ### float을 이용한 퀴즈   
 
+ **예제 코드**
+```
+<head>
+   <meta charset="utf-8">
+   <title>박스모델</title>
+   <style>
+    #container {
+        width: 800px;
+        margin: 20px auto;/*위아래20px 좌우auto(양쪽을 반갈라서 넣겠다.)*/
+        border: 1px black solid;
+        padding: 20px;
+    }
+    img{
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 20px;
+        float: left;
+    }
+    h1 {
+        margin-block-start: 0.5em;
+    }
+    p {
+        line-height: 1.5em;
+        font-family: "맑은 고딕", 돋움;
+    }
+   </style>
+</head>
+<body>
+  <div id="container">
+      <img src="images/cover.jpg" class="left-img" alt="">
+      <h1>바쁜 3, 4학년을 위한 빠른 분수</h1>
+      <h2>3, 4학년이 꼭 알아야 할 분수를 한 권에 모았어요! </h2>
+      <p>한국 교육과정평가원이 최근 발표한 보고서에 따르면 ‘수포자’는 초등 3학년 때 분수를 배우면서 시작된다고 합니다. 분수를 어려워하는 이유는 분모와 분자, 2개의 수가 나와 낯설기 때문입니다. 이렇게 낯설고 어려운 분수, 어떻게 공부해야 할까요?</p>
+  </div>
+</body>
+```   
+**코드 예제 이미지**   
+![image](https://user-images.githubusercontent.com/84966961/121811851-a5987d80-cca0-11eb-91b2-f2bb3e4293c3.png)   
+   
+ 지금까지 배운 내용을 통해 다음과 같은 구성을 구현해보자.
 
-
-
-
-
-
-
-
+   
  <br/><br/><br/>
 <hr/>   
   ###  
  **예제 코드**
 ```
+<head>
+    <meta charset="utf-8">
+    <title>2단 레이아웃</title>
+    <style>
+        div {
+            border: black solid 1px;
+            margin: 10px;
+            padding: 10px;
 
+        }
+        #container {
+            width: 960px;
+            margin: 5px auto;
+        }
+        #header {
+            padding: 20px;
+        }
+        #contents {
+            width: 620px;
+            height: 230px;
+            float: left;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        #sidebar {
+            width: 216px;
+            height: 230px;
+            float: right;
+            background-color: rgba(255, 155, 119, 0.384);
+            padding: 20px;
+        }
+        #footer {
+            clear: both;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <H1>사이트 제목</H1>
+        </div>
+        <div id="contents">
+            <h2>본문</h2>
+
+            <p>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야
+                한다.</p>
+
+            <p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 언론·출판에 대한 허가나 검열과 집회·결사에
+                대한 허가는 인정되지 아니한다.</p>
+        </div>
+        <div id="sidebar">
+            <h2>사이드 바</h2>
+            <ul>
+                <li>모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.</li>
+            </ul>
+        </div>
+        <div id="footer">
+            <h2>푸터</h2>
+            <p>이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다.</p>
+        </div>
+    </div>
+</body>
 ```   
-**코드 예제 이미지**   
+**코드 예제 이미지**  
+![image](https://user-images.githubusercontent.com/84966961/121812046-5c94f900-cca1-11eb-9863-3633acdb6729.png)   
+   
+ 이 예제를 통해 기본적인 HTML 파일의 레이아웃 구조를 파악해보고자 한다.   
+    
+ 웹 페이지는 크게 header, contents, sidebar, footer 등의 부분으로 나뉘며 이용자가 쉽게 이해할 수 있도록 구성되며 각각의 기능을 수행한다. 주로 header 부분에서는 사이트의 제목 혹은 네비게이션 바 혹은 메뉴 바가 위치하게 되고, contents 에서는 보여지고 싶은 내용 요소들, sidebar에서는 추가 내용들, footer에서는 주로 주소나 전화번호 등의 내용들이 표시되게 된다.
+
+   
  <br/><br/><br/>
 <hr/>   
-  ### 블록레벨 태그와 인라인레벨 태그    
+  ### position(static, realative, absolute, fixed)의 개념
  **예제 코드**
 ```
-
-```   
-**코드 예제 이미지**   
- 
- ```
- <input type="text" placeholder="공백없이 입력하세요." name="id">
- <input type="text" value="실제로 들어가는 값" name="id">
- ```
-    
-  위 두 코드의 차이점은 placeholder와 value 이다. value 값은 실제 텍스트 창에 웹사이트가 로드시 값이 저장된 상태로 출력되고, placeholder는 예시문의 기능으로 회색글씨에 바탕에 보이게 된다.   
-**예시 사진**
-![image](https://user-images.githubusercontent.com/84966961/121778525-2b012c80-cbd2-11eb-8ab1-5642c812c061.png)
-      
-#### radio 타입 설명   
-```
-            <dd><input type="radio" name="hobby" id="" checked> 웹퍼블리싱</dd>
-            <dd><input type="radio" name="hobby" id=""> 웹 애플리케이션 개발</dd>
-            <dd><input type="radio" name="hobby" id=""> 개발 환경 개선 </dd>
-```
-   
- radio 타입은 반드시 name 값과 value 값이 있어야 하며 동일한 name 값을 이용해 복수 선택 불가능인 한 그룹으로 묶어주는 기능을 한다. checked 라는 속성은 웹브라우저 출력시 라디오 버튼이 디폴트로 체크되어있을지 선택하는 속성이다.   
-   
-#### submit과 reset 타입 설명
-```
-<input type="submit" value="접수하기" name="" id="">
-<input type="reset" value="다시 쓰기" name="" id=""><br>
-```
-   
- form 태그로 묶인 내용들을 summit 태그를 통해 form 태그 action 속성에 지정해준 파일로 데이터를 전송한다.
- reset 태그는 말그대로 초기화, 새로고침 기능과 비슷한 기능이다.
-
-#### 일반 button 타입 설명   
-   
-```
-<input type="button" value="경고메세지" onclick="alert('메세지출력')" name="" id="">
-```
- 버튼 타입에는 onclick 속성을 넣어 참고사항 등 경고 표시를 할 수 있으며 다양한 기능을 수행할 수 있다.
-   
-### textarea 태그 
-```
-<textarea name="" id="" cols="60" rows="7" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
-```
-   
- textarea 태그는 일정한 크기를 가진 텍스트 창을 구현해주는 태그이다. 다음과 같은 모습으로 텍스트 창이 구현된다.   
-    
-![image](https://user-images.githubusercontent.com/84966961/121778846-cd6ddf80-cbd3-11eb-8c0d-f82fd32f20a1.png)
-
-### checkbox 태그
-```
-		<label for="">수강과목 <br>
-			<input type="checkbox" name="" id=""> java <br>
-			<input type="checkbox" name="" id=""checked> css <br>
-			<input type="checkbox" name="" id=""> sql <br>
-		</label>
-```
-
- 말그대로 체크박스 기능. 복수 선택이 가능하다. checkbox도 checked를 통해 브라우저 출력시 디폴트로 체크되어있을 박스를 지정할 수 있다.    
-   
-![image](https://user-images.githubusercontent.com/84966961/121779018-9815c180-cbd4-11eb-9b76-4d40d4113787.png)
-   
-### select 태그
-```
-		<select name="" id="">
-			<option value="1">직업선택</option>
-			<option value="2">개발자</option>
-			<option value="3">의사</option>
-			<option value="4">기사</option>
-		</select><br>
-```
-![image](https://user-images.githubusercontent.com/84966961/121779044-b7145380-cbd4-11eb-8697-3323bff02366.png)
-   
-select 태그는 위의 사진처럼 선택창을 만들어주는 태그이다.
-
-### 시간과 날짜 관련한 태그
-```
-		시간 </label><input type="time" name="" id="">
-		날짜출력 </label><input type="date" name="" id="">
-		시간 </label><input type="datetime" name="" id="">
-		로컬시간 </label><input type="datetime-local" name="" id="">
-```   
-   
-  time 태그는 시간을 선택할 수 있다.
-  date 태그는 날짜를 선택할 수 있다.
- 시간박스를 만들어주는 태그이다.
- 로컬 시간 태그는 연도와 달력을 볼 수 있다.
-   
-![image](https://user-images.githubusercontent.com/84966961/121779206-841e8f80-cbd5-11eb-9be7-9f6e89cddd51.png)
-   
-### color 태그 
-```
-		색상선택 </label><input type="color" name="" id="">
-```
-![image](https://user-images.githubusercontent.com/84966961/121779218-a4e6e500-cbd5-11eb-916c-5f47ed84cc2a.png)
-   
- RGB 색상을 선택할 수 있다.
-
-### image 태그
-```
-		<input type="image" src="images/orange.jpg" width="300" name="" id="">
-```
-   
- 이미지를 넣을 수 있다.
-
-<hr/>
-   
-  ## Hello CSS
-    
-```
-<style> 
-    /*선택자 {속성:값;} 로 효과를 주는 방식은 전체적으로 바꿀때 용이.*/
-        p {
-            color: rgba(12, 8, 247, 0.514); /*R,G,B,Alpha투명도*/
-            font-family: 'Ubuntu', sans-serif; /*영어*/
-            font-family: 궁서, 돋움, "맑은 고딕"; /*한글*/ 
-            font-family: 'Nanum Pen Script', cursive; /*한글2 : 나중에 선언되는 코드가 최종적으로 적용됨. 영어 우분투도 사라짐.*/
-            font-size: 0.05em;
-            font-weight: bold;
-            text-decoration: underline;
-            text-transform: capitalize;}
-        /*  font-family : 글꼴 1,2,"스페이스가 들어가면 쌍따옴표" 우선 적용(1번이 지원안될시 2번....)
-            font-size : 절대 크기(px,pt), 상대 크기(em,%)
-            font-weight: 굵게
-            text-decoration : 텍스트에 각종 선에 대한 옵션(underline:밑줄,line-through:취소선,none:선 없앰.
-            text-transform : 대소문자 변경 옵션)
-        */
-        h1{text-shadow: 3px -3px 5px red, 2px -3px 4px orange, 1px -1px 3px yellow ;/*속성값 : 가로 세로 번짐 색상*/}
+    <head>
+        <meta charset="utf-8">
+        <title>
+        </title>
+        <style>
+            /*static, relative, absolute, fixed*/
+        /*  static  : 디폴트값
+            absloute : 브라우저 기준 왼쪽 상단 기준으로 이동
+            relative : 현재 코딩 위치를 기준으로 이동
+            fixed   : static 기준(부모기준)으로 고정되어 이동 */
+            .b1 {
+                float: left;
+                width: 100px;
+                background: lightcoral;
+                margin-right: 10px;
+                padding: 20px;
+            }
+            .b2 {
+                position: relative;
+                top: 30px;
+                left: -30px; /*캐스캐이딩 : 요소와 요소가 겹쳐져서 보여줌*/
+                /* right: 30px;  left와 right 동시 사용 불가 */
+                float: left;
+                width: 300px;
+                background: lightgreen;
+                margin-right: 10px;
+                padding: 20px;
+            } 
+            p {position: relative;
+                top: -30px;
+                clear: both;}
         </style>
-		
-    <!--스타일 주는 법
-        1. head style 칸에 입력
-        2. 태그에 곧장 입력하는법 <body style:~~~~; >
-        3. 파일을 만들어서 불러오는 방식
-        - 특정 양식을 정해놓아서 다른 파일도 가져다 쓸 수 있도록 효율을 높인 방식.-->
+    </head>
+    <body>
+      <div class="b1">박스1</div>
+      <div class="b2">박스2</div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam dolor velit adipisci eligendi laborum perferendis, optio cum nisi explicabo fugit repellendus reiciendis ducimus iste nesciunt est a, ab, molestiae natus.</p>
+    </body>
+```   
+**코드 예제 이미지**  
+![image](https://user-images.githubusercontent.com/84966961/121812238-15f3ce80-cca2-11eb-9d05-c6538c221f72.png)   
+   
+ 각 값은 언제나 부모를 기준으로 위치값을 정하는 것이며 디폴트 앱솔루트 상태에서는 브라우저의 좌상단 꼭지점이 (0,0) 좌표를 나타낸다. 다음은 4가지 속성에 대한 설명이다.
 
-        <!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
-        <!--mystyle.css 의 스타일 값을 적용시킴 link 시킴.-->
-```
+  static  : 디폴트값
+  absloute : 브라우저 기준 왼쪽 상단 기준으로 이동
+  relative : 현재 코딩 위치를 기준으로 이동
+  fixed   : static 기준(부모기준)으로 고정되어 이동
 
- **CSS 연습 예제**
-```
-<body>
-    <h1>HTML5</h1>
-    <p style="color: red;">오늘도 즐거운 하루 되세요.</p>
-    <p style="color: orange;"><b>오늘도 즐거운 하루 되세요.</b> </p>
-    <p style="color: yellow;">오늘도 즐거운 하루 되세요.</p>
-    <p style="color: green;">오늘도 즐거운 하루 되세요.</p>
-    <p style="color: blue;">오늘도 즐거운 하루 되세요.</p>
-    <p style="color: navy;">오늘도 즐거운 하루 되세요.</p>
-    <p style="color: purple;">오늘도 즐거운 하루 되세요.</p>
-    <p>
-        이 것은 디폴트 색 <br>
-        <i>this is ubuntu italic</i>
-        이 것은 나눔 펜 스크립트
-    </p>
-    <link rel="stylesheet" href="submit.html" style="text-decoration: none;">네이버
-    <!-- 앞으로는 바뀌지 않을 경우 바로 지정하는 게 좋음.-->
-</body>   
-```
+ 박스를 만들어 연습삼아 다음과 같이 위치를 잡아보자. 박스를 포함하는 wrap의 크기는 300px, 300px 이며 내부 박스의 크기는 50px, 50px로 한다.
 
 **예제 이미지**   
-![image](https://user-images.githubusercontent.com/84966961/121779360-33f3fd00-cbd6-11eb-9568-43f38a5bd3b4.png)
+![image](https://user-images.githubusercontent.com/84966961/121812355-7be05600-cca2-11eb-9074-8fe8fac2288f.png)   
+ 
 
-<hr/>
-   
- ## Class와 id의 개념
-    
-  **예제 태그**
+ **답안 코드**
 ```
-<html>
-<head>
-    <title>text-shadow</title>
-    <meta charset="utf-8">
-    <style>
-        
-        body{
-            background: white; /*문서배경색*/
-        }
-        h1{
-            font-size: 80px;
-            font-family: "Arial Rounded MT";
-            letter-spacing: 4px; /* 자간 */
-        }
-        .shadow3 { 
-            color: black;
-            text-shadow: 0px 0px 4px white,0px -5px 4px yellow ,2px -10px 6px orange ,-2px -15px 11px rgba(255, 145, 0, 0.829), 4px -20px 18px red ;}
-        } 불모양 만들기
-        p {letter-spacing: 0.2em;} /* 자간 조절 */
-        div {
-            width: 150px;
-            height: 150px;
-            border: 1px solid black;
-            white-space: pre-wrap;} 
-            /* nowrap 테두리로 씌우지않음
-                pre 내용 그대로
-                pro-wrap 내용 그대로 씌워서 */
-        .c1 {color: red;}
-        .c2 {color: green;}
-        .c3 {color: blue}
-        .c4 {font-size: 30px;}
+    <head>
+        <meta charset="utf-8">
+        <title>
+        </title>
+        <style>
+            /*static, relative, absolute, fixed*/
+        /*  static  : 디폴트값
+            absloute : 브라우저 기준 왼쪽 상단 기준으로 이동
+            relative : 현재 코딩 위치를 기준으로 이동
+            fixed   : 화면을 기준으로 고정됨. (로그인 버튼, top위로 버튼, navigator 등등) */
+            #wrap {
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+                position: relative;
+            } 
+            .box {
+                width: 50px;
+                height: 50px;
+                background: burlywood;
+                position: absolute; /*브라우저 좌상단 기준 아님. 상속된 속성값 기준*/
+            }
+            #crd1 {top: 0; left: 0;}
+            #crd2 {top: 0; right: 0;}
+            #crd3 {bottom: 0; left: 0;}
+            #crd4 {bottom: 0; right: 0;}
+            #crd5 {top: 100px; left: 100px;}
 
-        #p1 {font-size: 10px;}
-        #p2 {font-size: 20px;}
-        #p3 {font-size: 30px;}
-        #p4 {color: purple;}
-
-        h1,h2 {text-align: center;} /* 그룹선택자 , : 두가지를 동시에 선언 가능 */
-        .h2 {text-align: left;}
-    </style>
-</head> 
-<body>
-    <h1 class="shadow3 h2">HTML5</h1> 
-    <!-- h2라는 클래스 선언 가능, 초기 선언에 덮어쓰면(h1은 center가 디폴트지만 h2 클래스로 덮음) 최종 선언이 잔류함.-->
-    <h1>안녕하세요</h1>
-    <h2>안녕하세요</h2>
-    <div>안녕하세요               안녕하세요             안녕하세요             안녕하세요        안녕하세요           안녕하세요 </div>
-    <p>letter-spacing 자간조절</p>
-    <p class="c1 c4">이 것은 c1 클래스(색깔)와 c4 클래스(30px)의 p태그</p>
-    <p class="c2">이 것은 c2 클래스의 p태그</p>
-    <p class="c3">이 것은 c3 클래스의 p태그</p>
-    <div class="c2"> 이것은 클래스 c2의 div</div>
-    <!-- 클래스는 태그를 막론하고 다 기능을 함. 따라서 단순 CSS요소를 먹이고싶을때 할 수 있음.-->
-
-    <p id="p1 p4">이 것은 p1 id와 p4 id의 p태그</p>
-    <p id="p2">이 것은 p2 id의 p태그</p>
-    <p id="p3">이 것은 p3 id의 p태그</p>
-    <div class="c2" id="p3"> 이것은 클래스 c2, p3 id의 div</div>
-    <!-- class id 혼용 가능.-->
-
-    <p class="c1 c4">이 것은 c1 클래스(색깔)와 c4 클래스(30px)의 p태그</p>
-    <p id="p1 p4">이 것은 p1 id와 p4 id의 p태그</p> <!--동시 작용 불가능-->
-    <!-- class id의 차이점 : 다른 효과 동시 적용 가능 불가능 차이-->
-
-</body>   
-</html>
-```
-
-![image](https://user-images.githubusercontent.com/84966961/121779413-7584a800-cbd6-11eb-9715-031ab742e057.png)
-
- 클래스와 id에 대한 예제였다.
-
-
-
-
-
-
-
-
-
-
-
-
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="box" id="crd1"></div>
+            <div class="box" id="crd2"></div>
+            <div class="box" id="crd3"></div>
+            <div class="box" id="crd4"></div>
+            <div class="box" id="crd5"></div>
+        </div>
+    </body>
+```   
 
