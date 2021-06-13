@@ -96,10 +96,12 @@ Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, ma
 <br/>
  이번 예제에서는 또한 span이라는 새로운 태그를 써서 특정 부분의 텍스트 블럭에만 빨간색의 배경색을 주었다. span 태그는 CSS와 함께 사용되며 div와는 달리 줄바꿈이 되지 않는 태그이다.<br/>
 
-<br/><br/><br/><br/>
+<br/><br/><br/>
 <hr/>
- ### Market 예제
- ```
+
+ ### Market 예제   
+ 
+```
 <head>
 	<meta charset="utf-8">
 	<title>market</title>
