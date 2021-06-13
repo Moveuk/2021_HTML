@@ -523,9 +523,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 
    
  <br/><br/><br/>
-<hr/>   
+<hr/>
+   
   ### box-sizing 속성   
- **예제 코드**
+  
+ **예제 코드**   
+ 
 ```
 	<head>
 		<meta charset="utf-8">
@@ -553,7 +556,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
         <div class="box1">box-sizing = "content-box"</div>
         <div class="box2">box-sizing = "border-box"</div>
 	</body>
-```   
+```
+
 **코드 예제 이미지**   
 ![image](https://user-images.githubusercontent.com/84966961/121810827-408f5880-cc9d-11eb-9638-790acbd9143f.png)   
    
@@ -567,9 +571,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 
    
  <br/><br/><br/>
-<hr/>   
-  ### 페이지의 구성을 잡아주는 float과 clear     
- **예제 코드**
+<hr/>
+   
+  ### 페이지의 구성을 잡아주는 float과 clear   
+  
+ **예제 코드**   
+ 
 ```
 	<head>
 		<meta charset="utf-8">
@@ -640,25 +647,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
  
    
  <br/><br/><br/>
-<hr/>   
-  ### 또 다른 display 속성 : inline-block
- **예제 코드**
+<hr/>
+   
+  ### 또 다른 display 속성 : inline-block   
+  
+ **예제 코드**   
+ 
 ```
 	<head>
 		<meta charset="utf-8">
 		<title>display 속성</title>
 		<style>
 			a:link, a:visited { 
-			/*	1. a:link 방문 전 링크 상태
-				2. a:visited 방문 후 링크 상태
-				3. a:hover 마우스 오버했을 때 링크 상태
-				4. a:active  클릭했을 때 링크 상태
-				하이퍼링크 클릭후 색깔 등을 없애는 용도?
-				*/
 				color:black;
 				text-decoration: none;
 			}
-            nav li{display: inline-block;} /*???*/
+            nav li{display: inline-block;}
         
 			li {
 				width: 70px;
@@ -679,7 +683,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 			</ul>
 		</nav>
 	</body>
-```   
+```
+   
 **코드 예제 이미지**   
 ![image](https://user-images.githubusercontent.com/84966961/121811389-49812980-cc9f-11eb-9c43-eeda4b38dc3f.png)   
    
@@ -697,10 +702,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
  링크 태그의 경우 위의 경우들 처럼 기본 디폴트 값으로 파랗게 변하거나 밑줄이 쳐지는 등의 값이 존재하기 때문이다.
    
  <br/><br/><br/>
-<hr/>   
+<hr/>
+   
  ### float을 이용한 퀴즈   
 
- **예제 코드**
+ **예제 코드**   
+ 
 ```
 <head>
    <meta charset="utf-8">
