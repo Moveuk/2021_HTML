@@ -106,6 +106,7 @@ Key Word : form, action, label, paragraph, hr, 목록 태그(dl, dt, dd), text t
  1강에서 배운 개념과 예제 태그와 더불어 다른 태그들에 대해 정리해보려고 한다.
    
 <br/><br/>
+<br/><br/>
 <hr/>
    
  ### paragraph 태그   
@@ -120,6 +121,7 @@ Key Word : form, action, label, paragraph, hr, 목록 태그(dl, dt, dd), text t
     
  p 태그는 문단 태그로서 p 태그 안의 내용을 중심으로 위아래 공백 라인을 잡아준다.
    
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -138,7 +140,8 @@ hr.six{border:none; border:5px double orange;}
 ```
    **예시 화면**
 ![image](https://user-images.githubusercontent.com/84966961/121777572-d5c31c00-cbcd-11eb-8a42-9e9a8f8f6742.png)   
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -153,7 +156,8 @@ hr.six{border:none; border:5px double orange;}
     
  form 태그는 사용자 의견이나 정보를 알기 위해 입력할 큰 틀을 만드는 데 사용되는 태그이다. 폼은 입력된 데이터(주로 input 태그에 담긴 정보들)를 한 번에 서버로 전송한다. 전송한 데이터는 웹 서버가 처리하고, 결과에 따른 또 다른 웹페이지를 보여준다. 오늘의 예시에서는 제출 처리로 summit.html 파일로 이동되도록 설정되어있다.
 
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -181,7 +185,8 @@ hr.six{border:none; border:5px double orange;}
  하지만 오늘의 예제에서는 지원자의 정보를 수집하기 위한 틀로써 사용되었으며 dd 내부에는 제목을 넣는 label 태그와 input 태그를 다양한 값을 제공받고자 넣어주었다. dd 태그는 자동으로 들여쓰기가 되며 들여쓰기 거리를 조절하려면 text-indent 속성이나 margin 혹은 padding left 값을 조절하여 사용할 수 있다.   
     
  dd는 계층 구조로 쓰이는 것이다.   
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -200,7 +205,8 @@ hr.six{border:none; border:5px double orange;}
  위의 예시 코드에서 label은 form 태그 내부에 존재하며 input 태그를 예시처럼 내부에 넣게되면 for 속성을 통해 서버 처리시 자동 연동이 된다.   
      
  label의 for 속성과 input의 id 값이 같다면 또한 연동 될 수 있다.
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -222,7 +228,8 @@ hr.six{border:none; border:5px double orange;}
 |submit|서버로 제출/전송하는 버튼을 만듭니다.|
 |button|일반 버튼을 생성합니다.|
 |reset|페이지 초기화를 합니다.|
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
     
@@ -234,9 +241,11 @@ hr.six{border:none; border:5px double orange;}
  ```
     
   위 두 코드의 차이점은 placeholder와 value 이다. value 값은 실제 텍스트 창에 웹사이트가 로드시 값이 저장된 상태로 출력되고, placeholder는 예시문의 기능으로 회색글씨에 바탕에 보이게 된다.   
+     
 **예시 사진**
 ![image](https://user-images.githubusercontent.com/84966961/121778525-2b012c80-cbd2-11eb-8ab1-5642c812c061.png)
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -248,7 +257,8 @@ hr.six{border:none; border:5px double orange;}
 ```
    
  radio 타입은 반드시 name 값과 value 값이 있어야 하며 동일한 name 값을 이용해 복수 선택 불가능인 한 그룹으로 묶어주는 기능을 한다. checked 라는 속성은 웹브라우저 출력시 라디오 버튼이 디폴트로 체크되어있을지 선택하는 속성이다.   
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -260,7 +270,8 @@ hr.six{border:none; border:5px double orange;}
    
  form 태그로 묶인 내용들을 summit 태그를 통해 form 태그 action 속성에 지정해준 파일로 데이터를 전송한다.
  reset 태그는 말그대로 초기화, 새로고침 기능과 비슷한 기능이다.
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -270,7 +281,8 @@ hr.six{border:none; border:5px double orange;}
 <input type="button" value="경고메세지" onclick="alert('메세지출력')" name="" id="">
 ```
  버튼 타입에는 onclick 속성을 넣어 참고사항 등 경고 표시를 할 수 있으며 다양한 기능을 수행할 수 있다.
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -282,7 +294,8 @@ hr.six{border:none; border:5px double orange;}
  textarea 태그는 일정한 크기를 가진 텍스트 창을 구현해주는 태그이다. 다음과 같은 모습으로 텍스트 창이 구현된다.   
     
 ![image](https://user-images.githubusercontent.com/84966961/121778846-cd6ddf80-cbd3-11eb-8c0d-f82fd32f20a1.png)
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -298,7 +311,8 @@ hr.six{border:none; border:5px double orange;}
  말그대로 체크박스 기능. 복수 선택이 가능하다. checkbox도 checked를 통해 브라우저 출력시 디폴트로 체크되어있을 박스를 지정할 수 있다.    
    
 ![image](https://user-images.githubusercontent.com/84966961/121779018-9815c180-cbd4-11eb-9b76-4d40d4113787.png)
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -314,7 +328,8 @@ hr.six{border:none; border:5px double orange;}
 ![image](https://user-images.githubusercontent.com/84966961/121779044-b7145380-cbd4-11eb-8697-3323bff02366.png)
    
 select 태그는 위의 사진처럼 선택창을 만들어주는 태그이다.
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
@@ -332,34 +347,36 @@ select 태그는 위의 사진처럼 선택창을 만들어주는 태그이다.
  로컬 시간 태그는 연도와 달력을 볼 수 있다.
    
 ![image](https://user-images.githubusercontent.com/84966961/121779206-841e8f80-cbd5-11eb-9be7-9f6e89cddd51.png)
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
-### color 태그 
+### color 태그   
 ```
 		색상선택 </label><input type="color" name="" id="">
 ```
 ![image](https://user-images.githubusercontent.com/84966961/121779218-a4e6e500-cbd5-11eb-916c-5f47ed84cc2a.png)
    
  RGB 색상을 선택할 수 있다.
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
-### image 태그
+### image 태그   
 ```
 		<input type="image" src="images/orange.jpg" width="300" name="" id="">
 ```
    
  이미지를 넣을 수 있다.
 
-<hr/>
-   
+
+<br/><br/>
 <br/><br/>
 <hr/>
    
-  ## Hello CSS
+ ## Hello CSS   
     
 ```
 <style> 
@@ -417,7 +434,8 @@ select 태그는 위의 사진처럼 선택창을 만들어주는 태그이다.
 ![image](https://user-images.githubusercontent.com/84966961/121779360-33f3fd00-cbd6-11eb-9568-43f38a5bd3b4.png)
 
 <hr/>
-   
+      
+<br/><br/>
 <br/><br/>
 <hr/>
    
