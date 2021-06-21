@@ -16,8 +16,8 @@ Basic grammar of HTML
 **0507 Lecture01 : Hello HTML**   
 Key Word :   
    
-**0510 Lecture02 : Hello CSS**   
-Key Word :
+**0510 Lecture02 : HTML 태그 & CSS의 **   
+Key Word : form, action, label, paragraph, hr, 목록 태그(dl, dt, dd), text type, radio type, submit, reset, button, textarea, checkbox, select, 시간 날짜 태그, color, image, CSS, id, class   
    
 **0511 Lecture03**   
 Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, margin과 padding의 개념, position(fixed, absolute, relative)의 개념, ovrflow : visible 속성, 블록레벨 태그, 인라인레벨 태그, border-radius, display(inline, block,...), 배경 그라데이션, box-sizing(content-box, border-box), float, inline-block, link, visited, hover, active
