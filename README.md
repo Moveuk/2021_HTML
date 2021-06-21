@@ -12,19 +12,20 @@ Basic grammar of HTML
    
 ## 목차
       
-**Lecture01 : Hello HTML**   
+
+**0507 Lecture01 : Hello HTML**   
 Key Word :   
    
-**Lecture02 : Hello CSS**   
+**0510 Lecture02 : Hello CSS**   
 Key Word :
    
-**Lecture03**   
+**0511 Lecture03**   
 Key Word : CSS, id, class, 배경(background), span, ul, ol, list-style-type, margin과 padding의 개념, position(fixed, absolute, relative)의 개념, ovrflow : visible 속성, 블록레벨 태그, 인라인레벨 태그, border-radius, display(inline, block,...), 배경 그라데이션, box-sizing(content-box, border-box), float, inline-block, link, visited, hover, active
    
-**Lecture04**   
-Key Word :
+**0512 Lecture04**   
+Key Word : Key Word : position(fixed, relative, absolute), Table border 없앰(border-collapse: collapse), Semantic(시맨틱) 태그, 초기화 코드, a:hover, nth-child, last-child, radio 타입을 안보이게 하기, ~, white-space, >, overflow
    
-**Lecture05**   
+**0513 Lecture05**   
 Key Word :
    
 **Lecture06**   
