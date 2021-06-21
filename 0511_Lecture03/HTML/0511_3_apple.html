@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>apple</title>
+    <style>
+        body {
+            font-family: "맑은 고딕", 돋움;
+        }
+        .container{
+            position: relative;
+            width: 600px;
+            height: 400px;
+            padding: 20px;
+            border: 1px solid white;
+            background: url('images/apple.jpg') no-repeat;
+            background-size: cover;
+        }
+        .content {
+            position: absolute;
+            top: 300px; /*위로부터 위치 값.*/
+            width: 90%;
+            background: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<!--박스모델 블록태그 인라인태그 인라인블록태그-->
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>하루 한알의 사과는 의사를 멀리 한다</h1>
+        </div>
+    </div>
+</body>
+
+</html>
