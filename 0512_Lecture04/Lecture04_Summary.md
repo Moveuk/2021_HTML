@@ -59,7 +59,7 @@ Key Word : position(fixed, relative, absolute), Table border 없앰(border-colla
 ```
    
 **브라우저 화면**    
-![image](https://user-images.githubusercontent.com/84966961/122773010-e7e63e00-d2e2-11eb-8684-df4a67cf1a67.png)   
+![image](https://user-images.githubusercontent.com/84966961/122779548-ee77b400-d2e8-11eb-874b-fb900759aaac.png)  
    
  결과 화면을 보면 `fx` id 값을 준 div 태그가 오른쪽 상단 기준으로 5px 위치에 고정된 것을 알 수 있다. 일전 수업에서도 다루었듯 `fixed` 속성을 주게 되면 스크롤을 내려도 브라우저 상에서 고정된다.   
     
