@@ -445,7 +445,8 @@ Key Word : position(fixed, relative, absolute), Table border 없앰(border-colla
 
 </html>
 ```
-  
+   
+**css/layout.css**   
 ```css
 body {
     font-family: "맑은 고딕", "고딕", "굴림";
