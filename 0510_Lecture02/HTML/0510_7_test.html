@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <title>test</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <style> 
+    /*선택자 {속성:값;} 로 효과를 주는 방식은 전체적으로 바꿀때 용이.*/
+        p {
+            color: rgba(12, 8, 247, 0.514); /*R,G,B,Alpha투명도*/
+            font-family: 'Ubuntu', sans-serif; /*영어*/
+            font-family: 궁서, 돋움, "맑은 고딕"; /*한글*/ 
+            font-family: 'Nanum Pen Script', cursive; /*한글2 : 나중에 선언되는 코드가 최종적으로 적용됨. 영어 우분투도 사라짐.*/
+            font-size: 0.05em;
+            font-weight: bold;
+            text-decoration: underline;
+            text-transform: capitalize;}
+        /*  font-family : 글꼴 1,2,"스페이스가 들어가면 쌍따옴표" 우선 적용(1번이 지원안될시 2번....)
+            font-size : 절대 크기(px,pt), 상대 크기(em,%)
+            font-weight: 굵게
+            text-decoration : 텍스트에 각종 선에 대한 옵션(underline:밑줄,line-through:취소선,none:선 없앰.
+            text-transform : 대소문자 변경 옵션)
+        */
+        h1{text-shadow: 3px -3px 5px red, 2px -3px 4px orange, 1px -1px 3px yellow ;/*속성값 : 가로 세로 번짐 색상*/}
+        </style>
+    <!--스타일 주는 법
+        1. head style 칸에 입력
+        2. 태그에 곧장 입력하는법 <body style:~~~~; >
+        3. 파일을 만들어서 불러오는 방식
+        - 특정 양식을 정해놓아서 다른 파일도 가져다 쓸 수 있도록 효율을 높인 방식.-->
+
+        <!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
+        <!--mystyle.css 의 스타일 값을 적용시킴 link 시킴.-->
+</head> 
+<body>
+    <h1>HTML5</h1>
+    <p style="color: red;">오늘도 즐거운 하루 되세요.</p>
+    <p style="color: orange;"><b>오늘도 즐거운 하루 되세요.</b> </p>
+    <p style="color: yellow;">오늘도 즐거운 하루 되세요.</p>
+    <p style="color: green;">오늘도 즐거운 하루 되세요.</p>
+    <p style="color: blue;">오늘도 즐거운 하루 되세요.</p>
+    <p style="color: navy;">오늘도 즐거운 하루 되세요.</p>
+    <p style="color: purple;">오늘도 즐거운 하루 되세요.</p>
+    <p>
+        이 것은 디폴트 색 <br>
+        <i>this is ubuntu italic</i>
+        이 것은 나눔 펜 스크립트
+    </p>
+    <link rel="stylesheet" href="submit.html" style="text-decoration: none;">네이버
+    <!-- 앞으로는 바뀌지 않을 경우 바로 지정하는 게 좋음.-->
+</body>   
+</html>
