@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>position_z-index
+        </title>
+        <style>
+            div#wrapper { /*div-> 한정선택자 div 중 wrapper*/
+                position: relative;
+                width: 150px;
+                height: 150px;
+                border: 1px solid black;
+            }
+            .box {
+                position: absolute;
+                width : 50px;
+                height : 50px;
+            }
+
+            #b1 {
+                top: 0;
+                left: 0;
+                z-index: 15; /*앞뒤 위치 변환*/
+                background : red;
+            }
+            #b2 {
+                top: 15px;
+                left: 30px;
+                z-index: 10;
+                background : yellow;
+            }
+            #b3 {
+                top: 30px;
+                left: 15px;
+                background : blue;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="b1" class="box">1</div>
+            <div id="b2" class="box">2</div>
+            <div id="b3" class="box">3</div>
+        </div>
+    </body>
+</html>

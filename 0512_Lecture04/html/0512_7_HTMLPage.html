@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter_5</title>
+    <link rel="stylesheet" href="css/0512_7_layout.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        /*초기화코드*/
+        /*브라우저 자체 padding이 8px을 가지고 있는 것처럼 기본 디폴트값을 
+        모두 리셋(보통 0 none)시켜놓고 시작하는 것.*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        li {list-style-type: none;}
+        a {text-decoration: none;}
+        img {border: 0;}
+        
+        /*헤더*/
+        #main_header{
+            width: 960px;
+            margin: 0 auto;
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+        }
+        #main_header > #title{/* '>' 첫번째 자손중에 라는 뜻 2대 3대 넘어에 있는 title 못잡음.*/
+        position: absolute;
+        left: 20px;
+        top : 30px;
+        font-family: 'Itim', cursive;
+        }
+        #main_header > #main_gnb{ /*main_gnb 위치 설정*/
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        #main_header > #main_lnb{ /*main_gnb 위치 설정*/
+            position: absolute;
+            right: 0px;
+            bottom: 10px;
+        }
+        header nav ul { /*블록들 inline화*/
+            display: inline;
+        }
+        /*gnb메뉴*/
+        #main_gnb > ul {
+            overflow: hidden;
+        }
+        #main_gnb > ul > li{
+            float: left;
+        }
+        #main_gnb > ul > li > a{/*디자인 구성*/
+            display: block;
+            border: 1px black solid;
+            padding: 2px 10px;
+        } /* 지정하는 곳이 같아도 용도가 다르면 분리*/
+        #main_gnb > ul > li > a:hover { /*기능 구성*/
+            background-color: black;
+            color: #fff;
+        } 
+        #main_gnb > ul > li:nth-child(1) > a{
+            border-radius: 10px 0px 0px 10px;
+        }#main_gnb > ul > li:last-child > a{
+            border-radius: 0px 10px 10px 0px;
+        }
+         /*lnb메뉴*/
+         #main_lnb > ul {
+            overflow: hidden;
+        }
+        #main_lnb > ul > li{
+            float: left;
+        }
+        #main_lnb > ul > li > a { /*디자인 구성*/
+            display: block;
+            border: 1px solid black;
+            padding: 5px 20px;
+        } /* 지정하는 곳이 같아도 용도가 다르면 분리*/
+        #main_lnb > ul > li > a:hover { /*기능 구성*/
+            background-color: black;
+            color: #fff;
+        } 
+        #main_lnb > ul > li:nth-child(1) > a{
+            border-radius: 10px 0px 0px 10px;
+        }#main_lnb > ul > li:last-child > a{
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        /*contents*/
+        #content {
+            width: 960px;
+            margin: 0 auto;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between
+        }
+        /*main_section*/
+        #content > #main_section {
+            width: 750px;
+        }
+        #main_section > article.main_article{
+            border: 1px black solid;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        /*main_aside*/
+        #content > #main_aside {
+            width: 200px;
+            float: right;
+        }
+        /* --------------------------- */
+        /* radio 타입을 안보이게 함. */
+        input:nth-of-type(1) {
+            display: none;
+        }
+        input:nth-of-type(2) {
+            display: none;
+        }
+        /* --------------------------- */
+
+        /* 먼저 div 내용을 모두 안보이게 함 */
+        input:nth-of-type(1) ~ div:nth-of-type(1)
+        /* ~ 같은 형제들(아래)중에 첫번째 div를 안보이게 해라
+        */
+        {
+            display: none;
+        }
+        input:nth-of-type(2) ~ div:nth-of-type(2)
+        /* ~ 같은 형제들(아래)중에 첫번째 div 선택
+        */
+        {
+            display: none;
+        }
+        /* --------------------------- */
+
+        /* checked 조건을 걸어서 원하는 정보를 보이게 만듬. */
+        input:nth-of-type(1):checked ~ div:nth-of-type(1) 
+        /* 첫번째 input이 checked상태 라면(:) 형제들중 (~) 첫번째 div를 보여라(block) */ {
+            display: block;
+        }
+        input:nth-of-type(2):checked ~ div:nth-of-type(2) 
+        /* 첫번째 input이 checked상태 라면(:) 형제들중 (~) 첫번째 div를 보여라(block) */ {
+            display: block;
+        }
+        /* --------------------------- */
+
+        aside#main_aside > section.buttons {
+            overflow: hidden;
+        }
+        aside#main_aside > section.buttons > label {
+            display: block;
+            float: left;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 28px;
+            border: 1px black solid;
+            background: black;
+            color: white;
+            box-sizing: border-box;
+        }
+        aside#main_aside > section.buttons > label:hover {
+            background-color: white;
+            color: #000;
+        }
+        aside#main_aside > input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1) {
+            background-color: white;
+            color: #000;
+        }
+        aside#main_aside > input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {
+            background-color: white;
+            color: #000;
+        }
+        /*----메뉴탭 끝----*/
+        /*----aside 본문 스타일 시작----*/
+        aside#main_aside > div.tab_item > ul > li.item {
+            overflow: hidden;
+            border: 1px black solid;
+            border-top: none;
+            padding: 10px;
+            width: auto;
+            height: 45px;
+            position: relative;
+            display: hidden;
+        }
+
+        aside#main_aside > div.tab_item > ul > li.item > a > div.thumbnail {
+            float: left;
+            display: inline;
+            padding-right: 10px;
+        }
+        aside#main_aside > div.tab_item > ul > li.item > a > div.description {
+            float: right;
+        }
+        aside#main_aside > div.tab_item > ul > li.item > a > div.description strong {
+            display: block;
+            width: 123px;
+            white-space: nowrap;
+            /*white-space : 스페이스와 탭, 줄바꿈, 자동줄바꿈을 어떻게 처리할지 정하는 속성*/
+            overflow: hidden;
+            /*overflow: hidden; - 부모보다 큰걸 안보이게 없앰.
+             오버플로우만 쓰면 실제로 한줄로 넘어가는 것이 아님.
+             따라서 white-space nowrap으로 강제로 한줄로 쭉 나오게끔 해줘야 ellipsis가 먹힘.*/
+            text-overflow: ellipsis;
+        }
+        
+        /*footer*/
+        footer#main_footer {
+            width: 960px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            height: auto;
+            border: 1px black solid;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <hgroup id="title">
+            <h1>Rint Development</h1>
+            <h2>HTML5 + CSS3 Basic</h2>
+        </hgroup>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">Simulation</a></li>
+                <li><a href="#">Data</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1>Main Article</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+            </article>
+            <article class="main_article">
+                <h1>Main Article</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+            </article>
+            <article class="main_article">
+                <h1>Main Article</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing. Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra.</p>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input id="first" type="radio" name="tab" checked="checked" />
+            <input id="second" type="radio" name="tab" />
+            <!-- input id 와 label for가 연결됨.-->
+            <section class="buttons">
+                <label for="first">First</label>
+                <label for="second">Second</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>HTML5 Canvas</strong><p>2012-03-15</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>HTML5 Audio</strong><p>2012-03-15</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>HTML5 Video</strong><p>2012-03-15</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>HTML5 Semantic Web</strong><p>2012-03-15</p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>CSS3 Transition</strong><p>2012-03-15</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>CSS3 Animation</strong><p>2012-03-15</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>CSS3 Border</strong><p>2012-03-15</p>
+                        </div>
+                    </a></li>
+                    <li class="item"><a href="#">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/45x45" />
+                        </div>
+                        <div class="description">
+                            <strong>CSS3 Box</strong><p>2012-03-15</p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer id="main_footer">
+        <h3>HTML5 + CSS3 Basic</h3>
+        <address>Website Layout Basic</address>
+    </footer>
+</body>
+</html>
